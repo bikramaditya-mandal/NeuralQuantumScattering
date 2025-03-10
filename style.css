@@ -72,10 +72,13 @@ ul li {
 }
 
 /* Style for publication links */
-ul li a {
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
+/* Apply the box style only to publication list items */
+section ul li {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 ul li a:hover {
