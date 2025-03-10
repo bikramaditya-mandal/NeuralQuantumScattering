@@ -10,23 +10,28 @@ nav ul {
     margin: 0;
 }
 
+/* Ensure the navigation menu links don't get the white box */
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    background: none !important; /* Removes any background */
+    padding: 0; /* Reset padding */
+    margin: 0 15px; /* Keep space between items */
 }
 
+/* Fix navigation menu links */
 nav ul li a {
-    text-decoration: none;
-    color: white; /* Make sure text is visible */
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: 0.3s;
+    background: none !important; /* Remove any white box */
+    padding: 10px 15px; /* Keep the clickable area */
+    color: white; /* Keep text white */
+    display: inline-block; /* Prevent stretching */
+    border-radius: 0; /* Ensure no extra styling */
 }
 
+/* Hover effect for navigation */
 nav ul li a:hover {
     background: #444;
     border-radius: 5px;
 }
+
 
 /* Style for social media icons */
 .social-links {
