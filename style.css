@@ -22,7 +22,7 @@ nav ul li a {
     background: none !important; /* Remove any white box */
     padding: 10px 15px; /* Keep the clickable area */
     color: white; /* Keep text white */
-    display: inline-block; /* Prevent stretching */
+    display: inline; /* Prevent stretching */
     border-radius: 0; /* Ensure no extra styling */
 }
 
