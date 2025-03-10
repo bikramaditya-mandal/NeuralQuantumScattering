@@ -90,3 +90,34 @@ ul li a:hover {
     text-decoration: underline;
 }
 
+.reverse-list {
+    counter-reset: publication-counter; /* Initialize counter */
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+}
+
+.reverse-list li {
+    counter-increment: publication-counter; /* Increase counter */
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Auto-number each list item in reverse */
+.reverse-list li::before {
+    content: "#" counter(publication-counter); /* Add number */
+    font-weight: bold;
+    color: #0073e6;
+    position: absolute;
+    left: -25px;
+}
+
+/* Reverse the order */
+.reverse-list {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
