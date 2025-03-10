@@ -27,3 +27,25 @@ nav ul li a:hover {
     background: #444;
     border-radius: 5px;
 }
+
+/* Style for social media icons */
+.social-links {
+    display: flex;
+    justify-content: center; /* Align icons */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Control the size of the icons */
+.social-links img {
+    width: 40px;  /* Set width */
+    height: 40px; /* Set height */
+    object-fit: contain; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+/* Slight hover effect */
+.social-links img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
