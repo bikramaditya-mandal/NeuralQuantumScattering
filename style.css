@@ -124,7 +124,7 @@ ul li a:hover {
 section img {
     display: block;
     margin: 0 auto;
-    width: 50%; /* Adjust width as needed */
+    width: 20%; /* Adjust width as needed */
     border-radius: 10px; /* Optional: Adds rounded corners */
 }
 
