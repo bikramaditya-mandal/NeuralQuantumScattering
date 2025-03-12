@@ -125,6 +125,17 @@ section img {
     display: block;
     margin: 0 auto;
     width: 20%; /* Adjust width as needed */
+    max-width: 100px; /* Ensures it doesn't exceed 400px */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+img {
+    width: 20%;  /* Reduces size to 50% of its original width */
+    max-width: 400px; /* Ensures it doesn't exceed 400px */
+    height: auto; /* Keeps aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the image */
     border-radius: 10px; /* Optional: Adds rounded corners */
 }
 
