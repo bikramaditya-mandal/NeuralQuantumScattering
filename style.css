@@ -124,9 +124,60 @@ ul li a:hover {
 section img {
     display: block;
     margin: 0 auto;
-    width: 40%; /* Adjust width as needed */
-    max-width: 200px; /* Ensures it doesn't exceed 400px */
+    width: 100%; /* Adjust width as needed */
+    max-width: 300px; /* Ensures it doesn't exceed 400px */
     height: auto; /* Keeps aspect ratio */
     border-radius: 10px; /* Optional: Adds rounded corners */
 }
+
+.social-links {
+    display: flex;
+    flex-direction: column; /* Makes it vertical */
+    gap: 10px; /* Spacing between items */
+    align-items: start; /* Align items to the left */
+}
+
+.social-item {
+    display: flex;
+    align-items: center; /* Align text and icon */
+    text-decoration: none;
+    color: black; /* Adjust color as needed */
+    font-size: 16px;
+}
+
+.icon {
+    width: 24px; /* Adjust size */
+    height: 24px;
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.section {
+    background-color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.section:hover {
+    background-color: #e0e0e0;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.section-content {
+    display: none; /* Hide details initially */
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.active .section-content {
+    display: block; /* Show content when active */
+}
+
 

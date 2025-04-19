@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Quantum Scattering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    function toggleSection(event) {
+    event.stopPropagation(); // Prevent bubbling to parent
+
+    const section = event.currentTarget.parentElement;
+    const content = section.querySelector('.section-content');
+
+    if (content) {
+        const isHidden = content.style.display === 'none' || content.style.display === '';
+        content.style.display = isHidden ? 'block' : 'none';
+    }
+}
+</script>
+
+
+<body>
+    <header>
+        <h1>Welcome to My Research & Teaching Page</h1>
+        <p>Theoretical Quantum Mechanics | Quantum Dynamics of Inelastic & Reactive Scattering | Machine Learning</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="research.html">🔬 Research</a></li>
+            <li><a href="publications.html">📄 Publications</a></li>
+            <li><a href="teaching.html">📘 Teaching</a></li>
+            <li><a href="https://www.dropbox.com/scl/fi/egq8ebodea3eoebwcef67/CV_Bikramaditya_Mandal.pdf?rlkey=l37vepygbl7uv78vw1y3blvub&dl=0" target="_blank">📜 CV</a></li>
+            <li><a href="contact.html">📧 Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Teaching</h2>
+        <p> A brif description about my teaching experience during my PhD and Postdoctoral tenure is provided. <span style="color: blue;">Please expand the section you want to know more details about.</p>
+    </section>
+
+    <div class="section">
+        <div class="section-title" onclick="toggleSection(event)">Computational Chemistry, University of Nevada Las Vegas, Fall 2023, 24</div>
+        <div class="section-content">
+
+            <p style="text-indent: 4em;">
+                <strong>Curriculum Design & Instruction</strong>
+            </p>
+            <li>
+                Prepared in-class teaching material for the course including, but not limited to, Born-Oppenheimer Approximation, 
+                Hartree Self-Consistent-Field (SCF) method, Hartree-Fock
+            </li>
+            <li>
+                Created structured lessons that are primarily focused on applications that helped students translate theoretical concepts 
+                into computational practice within the field of quantum chemistry
+            </li>
+
+            <p style="text-indent: 4em;">
+                <strong>In-class Instruction</strong>
+                <br>Guided students through practical quantum chemistry calculations using Gaussian09, focusing on:
+            </p>
+            <li>
+                Molecular geometry and energy optimization
+            </li>
+            <li>
+                Vibrational frequency analysis
+            </li>
+            <li>
+                Construction of potential energy surfaces (PES)
+            </li>
+            <li>
+                Transition state identification and reaction path mapping via intrinsic reaction coordinates (IRC)
+            </li>
+
+            <p style="text-indent: 4em;">
+                <strong>Developing Software Skills of Students</strong>
+            </p>
+            <li>
+                Taught students to analyze and interpret Gaussian09 output data using Avogadro, 
+                an open-source molecular modeling and visualization tool
+            </li>
+            <li>
+                Demonstrated molecule building, structure manipulation, and visualization techniques essential for understanding 
+                chemical phenomena at the molecular level
+            </li>
+            <li>
+                Taught Python to extract gemoetry and potential value to build and plot potential energy surface
+            </li>
+            <li>
+                Explained shell script for managing 
+            </li>
+
+            <p style="text-indent: 4em;">
+                <strong>Instructional Resource Development</strong>
+            </p>
+            <li>
+                Produced and distributed a suite of instructional video tutorials to support pre-class preparation and 
+                independent learning
+            </li>
+            <li>
+                Topics included accessing and using high-performance computing (HPC) access, navigating though the cluster using 
+                unix command line, cross-platform software installation (macOS, Linux, Windows), and molecular modeling workflows
+            </li>
+        </div>
+    </div>
+
+<div class="section">
+    <div class="section-title" onclick="toggleSection(event)">Graduate Teaching Assistant, Marquette University, Fall 2016, 17, 19 & Spring 2019</div>
+    <div class="section-content">
+
+        <div class="section">
+            <div class="section-title" onclick="toggleSection(event)"><span style="color: blue;">Chemistry Lab duties</span></div>
+            <div class="section-content">
+
+                <p style="text-indent: 4em;">
+                    <strong>Teaching & Instruction</strong>
+                </p>
+                <li>
+                    Conducted weekly undergraduate laboratory sessions where I guided students through experimental procedures and 
+                    thus, fostering a positive learning environment
+                </li>
+                <li>
+                    Explained complex chemistry concepts in a practical context to enhance understanding and retention in the lab
+                </li>
+
+                <p style="text-indent: 4em;">
+                    <strong>Student Support & Mentoring</strong>
+                </p>
+                <li>
+                    Held weekly office hours for one-to-one support on course material, and address academic concerns individually
+                </li>
+                <li>
+                    Provided academic mentoring that contributed to improve course performance and confidence of a student
+                </li>
+
+                <p style="text-indent: 4em;">
+                    <strong>Assessment & Feedback</strong>
+                </p>
+                <li>
+                    Graded laboratory reports, in-class quizzes, and exams with a focus on fairness and accuracy
+                </li>
+                <li>
+                    Provided constructive feedback to improve writing skills for chemistry labs
+                </li>
+                <li>
+                    Ensured timely grading and consistent assessment standards in coordination with the course instructor
+                </li>
+
+                <p style="text-indent: 4em;">
+                    <strong>Organization & Collaboration</strong>
+                </p>
+                <li>
+                    Coordinated with course instructors, Dr. Vijay Vyas and Dr. Llanie Noble, and also with other teaching assistants to 
+                    provide feedback on the experiment handout, lab report template and grading rubrics alligned with course objectives
+                </li>
+                <li>
+                    Managed student records and maintained accurate grading documentation using D2L (direct to learning)
+                </li>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title" onclick="toggleSection(event)"><span style="color: blue;">Teaching chemistry through discussion sessions</span></div>
+            <div class="section-content">
+
+                <p style="text-indent: 4em;">
+                    <strong>Teaching & Instruction</strong>
+                </p>
+                <li>
+                    Facilitated weekly recitation sessions to reinforce lecture material, clarify complex concepts, and guide students 
+                    through problem-solving exercises.
+                </li>
+                <li>
+                    Developed and presented additional instructional content tailored to student needs and the course syllabus
+                </li>
+
+                <p style="text-indent: 4em;">
+                    <strong>Teaching & Instruction</strong>
+                </p>
+                <li>
+                    Encouraged interactive discussions and critical thinking by posing conceptual questions and 
+                    fostering collaboration through group discussion during recitations
+                </li>
+                <li>
+                    Responded to spontaneous student questions, adapting explanations in real time to improve comprehension
+                </li>
+
+                <p style="text-indent: 4em;">
+                    <strong>Curriculum Support & Delivery</strong>
+                </p>
+                <li>
+                    Assisted the instructor to improve recitation topics with weekly lecture objectives and upcoming assessments
+                </li>
+                <li>
+                    Utilized a mix of whiteboard work, slides, and real-time demonstrations to accommodate diverse learning styles
+                </li>
+            </div>
+        </div>
+            
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; Dr. Bikramaditya Mandal </p>
+    </footer>
+</body>
+</html>
