@@ -54,9 +54,45 @@
             award for my Ph.D. Thesis in 2021.
         </p>
     </section>
-    <footer>
-        <p>&copy; Dr. Bikramaditya Mandal </p>
-	<img src="https://hits.sh/bikramaditya-mandal.github.io/NeuralQuantumScattering.svg?style=flat-square&label=Visitors" alt="Visitor counter">
-    </footer>
+<footer>
+    <p>&copy; Dr. Bikramaditya Mandal</p>
+    <p id="visitor-count" style="font-size: 1.2rem; font-weight: bold; color: red;"></p>
+</footer>
+
+<script>
+const countEl = document.getElementById('visitor-count');
+
+// Function to fetch current counter value
+function fetchCurrentCounter() {
+    fetch("https://api.countapi.xyz/get/bikramaditya-mandal/neuralquantumscattering")
+      .then(resp => resp.json())
+      .then(data => {
+          countEl.textContent = "You are visitor number: " + data.value;
+      })
+      .catch(err => {
+          console.error("Visitor counter fetch failed:", err);
+          countEl.textContent = "You are visitor number: 0"; // fallback
+      });
+}
+
+// Increment counter only once per browser
+if(!localStorage.getItem('counted')) {
+    localStorage.setItem('counted', 'true');
+
+    fetch("https://api.countapi.xyz/hit/bikramaditya-mandal/neuralquantumscattering")
+      .then(resp => resp.json())
+      .then(data => {
+          countEl.textContent = "You are visitor number: " + data.value;
+      })
+      .catch(err => {
+          console.error("Increment failed, fetching current counter:", err);
+          fetchCurrentCounter();
+      });
+
+} else {
+    // Already counted, just fetch current counter
+    fetchCurrentCounter();
+}
+</script>
 </body>
 </html>
