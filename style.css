@@ -17,6 +17,11 @@ header h1 {
 }
 
 /* Scrolling text animation */
+.scrolling-wrapper {
+    width: 100%;           /* stays within mobile width */
+    overflow: hidden;      /* hides overflow */
+}
+
 .scrolling-text {
     display: inline-block;
     white-space: nowrap;
