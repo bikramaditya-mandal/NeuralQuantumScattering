@@ -1,3 +1,10 @@
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
 header {
     text-align: center;        /* Centers all text inside header */
     padding: 20px 20px;
