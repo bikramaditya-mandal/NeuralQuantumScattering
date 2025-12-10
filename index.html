@@ -54,22 +54,9 @@
             award for my Ph.D. Thesis in 2021.
         </p>
     </section>
-	<p style="font-size: 1.2rem; color: red;">
-	    You are visitor number: <span id="visits" style="font-weight: bold;"></span>
-	</p>
     <footer>
         <p>&copy; Dr. Bikramaditya Mandal </p>
+	<img src="https://hits.sh/bikramaditya-mandal.github.io/NeuralQuantumScattering.svg?style=flat-square&label=Visitors" alt="Visitor counter">
     </footer>
-<script>
-window.addEventListener('DOMContentLoaded', () => {
-  fetch("https://api.countapi.xyz/hit/bikramaditya-mandal/neuralquantumscattering")
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("visits").textContent = data.value;
-    })
-    .catch(error => console.error("Visitor counter error:", error));
-});
-</script>
-
 </body>
 </html>
