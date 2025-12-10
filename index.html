@@ -61,11 +61,15 @@
         <p>&copy; Dr. Bikramaditya Mandal </p>
     </footer>
 <script>
-fetch("https://api.countapi.xyz/hit/bikramaditya-mandal/neuralquantumscattering")
-  .then(r => r.json())
-  .then(d => {
-    document.getElementById("visits").textContent = d.value;
-  });
+window.addEventListener('DOMContentLoaded', () => {
+  fetch("https://api.countapi.xyz/hit/bikramaditya-mandal/neuralquantumscattering")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("visits").textContent = data.value;
+    })
+    .catch(error => console.error("Visitor counter error:", error));
+});
 </script>
+
 </body>
 </html>
