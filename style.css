@@ -1,3 +1,38 @@
+header {
+    text-align: center;        /* Centers all text inside header */
+    padding: 20px 20px;
+}
+
+/* Center the H1 explicitly (optional because header already centers it) */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Scrolling text animation */
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scroll-left 30s linear infinite;
+    font-size: 1.5rem;
+}
+
+.scrolling-text:hover {
+    animation-play-state: paused;
+}
+
+/* The animation itself */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(50%);   /* start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%);  /* move fully off-screen to the left */
+    }
+}
+
+
 nav {
     background: #222; /* Dark background */
     padding: 15px;
@@ -8,6 +43,22 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;          /* makes items horizontal */
+    justify-content: center; /* centers them horizontally */
+    gap: 50px;               /* space between menu items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 /* Ensure the navigation menu links don't get the white box */
@@ -123,9 +174,12 @@ ul li a:hover {
 
 section img {
     display: block;
+    float: left;
     margin: 0 auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
     width: 100%; /* Adjust width as needed */
-    max-width: 300px; /* Ensures it doesn't exceed 400px */
+    max-width: 400px; /* Ensures it doesn't exceed 400px */
     height: auto; /* Keeps aspect ratio */
     border-radius: 10px; /* Optional: Adds rounded corners */
 }
