@@ -55,76 +55,9 @@
         </p>
     </section>
 
-<footer style="display: flex; flex-direction: column; align-items: center; padding: 1rem; background: #f5f5f5;">
-    <p>&copy; Dr. Bikramaditya Mandal</p>
-    <div id="visitor-badge" style="
-        display: inline-block;
-        background-color: #ff4d4d;
-        color: white;
-        font-weight: bold;
-        padding: 0.4rem 0.8rem;
-        border-radius: 20px;
-        font-size: 1rem;
-        margin-top: 0.5rem;
-        text-align: center;
-        min-width: 120px;
-    ">
-        Loading...
-    </div>
-</footer>
-
-<script>
-const badgeEl = document.getElementById('visitor-badge');
-const namespace = "bikramaditya-mandal";
-const key = "neuralquantumscattering";
-
-// Function to fetch current counter value
-function fetchCurrentCounter() {
-    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
-      .then(resp => resp.json())
-      .then(data => {
-          badgeEl.textContent = "Visitor no: " + data.value;
-      })
-      .catch(err => {
-          console.error("Failed to fetch counter:", err);
-          badgeEl.textContent = "Visitor no: 0";
-      });
-}
-
-// Function to create counter if it doesn't exist
-function createCounter(initialValue = 1) {
-    fetch("https://api.countapi.xyz/create", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({namespace, key, value: initialValue})
-    })
-    .then(resp => resp.json())
-    .then(data => {
-        console.log("Counter initialized:", data);
-        fetchCurrentCounter();
-    })
-    .catch(err => {
-        console.error("Failed to create counter:", err);
-        badgeEl.textContent = "Visitor no: 0";
-    });
-}
-
-// Increment counter (once per browser)
-if(!localStorage.getItem('counted')) {
-    localStorage.setItem('counted', 'true');
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-      .then(resp => resp.json())
-      .then(data => {
-          badgeEl.textContent = "Visitor no: " + data.value;
-      })
-      .catch(err => {
-          console.log("Counter may not exist yet, creating it...");
-          createCounter(1);
-      });
-} else {
-    fetchCurrentCounter();
-}
-</script>
-
+    <footer>
+        <p>&copy; Dr. Bikramaditya Mandal </p>
+    </footer>
+<img src="https://hits.sh/bikramaditya-mandal.github.io/NeuralQuantumScattering.svg?style=flat-square&label=Visitors" alt="Visitor count">
 </body>
 </html>
