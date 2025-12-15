@@ -27,25 +27,41 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+<section class="home-carousel">
+  <div class="carousel-single">
+    <button class="prev">&#10094;</button>
+    <div class="carousel-slide">
+      <img src="images/TOC.pdf" class="active" alt="">
+      <img src="images/JPCL_cover.jpg" alt="">
+      <img src="images/Phd_defense.png" alt="">
+      <img src="images/AstroPAH.png" alt="">
+      <img src="images/PCCP_cover.pdf" alt="">
+      <img src="images/PhD_acknowledgement.png" alt="">
+      <img src="images/bk_graduation.png" alt="">
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+
     <section>
         <h2>About Me</h2>
         <img src="images/self.jpg" width="300" height="auto" >
-        <p><strong><span style="color: blue;">Second Postdoctoral Research Experience (January 2023 - current)</span></strong></p>
         <p style="text-indent: 0em;">
-            Hello! My Name is Bikramaditya Mandal. I am a Postdoctoral Researcher working with Prof. Balakrishnan Naduvalath at University of Nevada Las Vegas (UNLV). 
-            My research at UNLV is primarily focused on <strong>quantum control of cold and ultracold scattering of inelastic collisions and reactions</strong>. Additionally, 
-            I initiated a project where we applied <strong>Machine Learning (ML)</strong> using <strong>Neural Networks (NNs)</strong> into my research to build databases of
+            Hello! My Name is Bikramaditya Mandal. I am a <span style="color: blue;">Postdoctoral Scholar</span> working with Prof. Balakrishnan Naduvalath at University of Nevada Las Vegas (UNLV) <span style="color: blue;">since January 2023</span>.
+            My research at UNLV is primarily focused on <span style="color: blue;"><strong>quantum control of cold and ultracold scattering of inelastic collisions and reactions of alkali metal</strong></span>. Additionally,
+            I initiated a project where we applied <span style="color: blue;"><strong>Machine Learning (ML)</strong> using <strong>Neural Networks (NNs)</strong></span> into my research to build databases of
             rate-coefficients to be used for astronomical modelling of atmospheres of exoplanets, interstellar medium (ISM), and comets. Please go to my
             <a href="research.html" target="_blank">Research Section</a> to know more details about my current and previous research projects.
         </p>
 
-        <p><strong><span style="color: blue;">First Postdoctoral Research Experience (May 2021 - December 2022)</span></strong></p>
         <p style="text-indent: 0em;">
-            Prior to my tenure at UNLV, I worked as a Postdoctoral Researcher with Prof. Dmitri Babikov at Marquette University. My primary 
+            Prior to my tenure at UNLV, I worked as a <span style="color: blue;">Postdoctoral Scholar</span> with Prof. Dmitri Babikov at Marquette University <span style="color: blue;">from May 2021 - December 2022</span>. My primary 
             research was to develop mixed quantum/classical theory (MQCT) to study inelastic scateering of molecules. A more detailed description of my projects during that
             period is provided in the <a href="research.html" target="_blank">Research Section</a>.
         </p>
-        <p><strong><span style="color: blue;">Education</span></strong></p>
+
         <p style="text-indent: 0em;">
             I completed my undergraduate degree B.Sc. in Chemistry (Hons.) from Visva-Bharati University, Santiniketan, West Bengal, India in the year 2013. Following that, 
             I completed my master's degree (M.Sc.) from Visva-Bharati University in 2015. After that, I obtained my Ph.D. from Marquette University, Milwaukee, Wisconsin, 
@@ -54,6 +70,59 @@
             award for my Ph.D. Thesis in 2021.
         </p>
     </section>
+
+<script>
+let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide img');
+const totalSlides = slides.length;
+const intervalTime = 5000; // 5 seconds
+let slideInterval;
+
+// Show a specific slide
+function showSlide(index) {
+    slides.forEach((slide, i) => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+}
+
+// Move to next slide
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+}
+
+// Move to previous slide
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+}
+
+// Start automatic slideshow
+function startSlideShow() {
+    // Clear any existing interval first
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+}
+
+// Pause on hover
+const carousel = document.querySelector('.carousel-single');
+carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+carousel.addEventListener('mouseleave', startSlideShow);
+
+// Button listeners
+document.querySelector('.prev').addEventListener('click', () => {
+    prevSlide();
+    startSlideShow(); // Restart timer without immediate nextSlide
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    nextSlide();
+    startSlideShow(); // Restart timer without immediate nextSlide
+});
+
+// Initialize
+showSlide(currentIndex);
+startSlideShow();
+</script>
 
     <footer>
         <p>&copy; Dr. Bikramaditya Mandal </p>
